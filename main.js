@@ -7,3 +7,6 @@ const main = (function () {
   Angie.dni = 123456;
   console.log(Angie.obtenerNombreCompleto());
 })();
+
+
+ModuloMatematico.calcular();

@@ -1,20 +1,15 @@
-const Empleado = (function () {
-  var nombre;
-  var apellido;
-  var dni;
+function Empleado(nombreEmpleado, apellidoEmpleado, dniEmpleado) {
+  var nombre = nombreEmpleado;
+  var apellido = apellidoEmpleado;
+  var dni = dniEmpleado;
 
-  function oNombreCompleto() {
-    return nombre + " " + apellido;
-  }
-
-  function oMonto() {
-    throw new Error("El método debe invocarse desde una subclase");
-  }
-
-  return {
-    obtenerNombreCompleto: oNombreCompleto,
-    obtenerMonto: oMonto,
+  this.obtenerNombreCompleto = () => {
+    nombre + " " + apellido;
   };
-})();
+
+  this.obtenerMonto = () => {
+    throw new Error("El método debe invocarse desde una subclase");
+  };
+}
 
 module.exports = Empleado;

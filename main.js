@@ -1,12 +1,6 @@
 const Empleado = require("./Empleado");
 
 const main = (function () {
-  const Angie = Object.create(Empleado);
-  Angie.nombre = "Angie";
-  Angie.apellido = "Caceres";
-  Angie.dni = 123456;
+  const Angie = new Empleado("Angela","Caceres",123456);
   console.log(Angie.obtenerNombreCompleto());
 })();
-
-
-ModuloMatematico.calcular();

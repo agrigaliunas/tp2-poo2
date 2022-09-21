@@ -1,10 +1,10 @@
-function Empleado(nombreEmpleado, apellidoEmpleado, dniEmpleado) {
-  var nombre = nombreEmpleado;
-  var apellido = apellidoEmpleado;
-  var dni = dniEmpleado;
+function Empleado(nombre, apellido, dni) {
+  this.nombre = nombre;
+  this.apellido = apellido;
+  this.dni = dni;
 
   this.obtenerNombreCompleto = () => {
-    nombre + " " + apellido;
+    return this.nombre + " " + this.apellido;
   };
 
   this.obtenerMonto = () => {

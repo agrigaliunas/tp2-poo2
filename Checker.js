@@ -8,9 +8,9 @@ var Checker = (function () {
       }
     },
 
-    horasPositivas: function (horas) {
-      if (horas <= 0) {
-        throw new Error("Las horas son negativas o igual a 0.");
+    horasPositivas: function (horasTrabajadas, valorHora) {
+      if (horasTrabajadas <= 0 || valorHora <= 0) {
+        throw new Error("Las horas trabajadas o el valor de la hora son negativas o igual a 0.");
       } else {
         return true;
       }

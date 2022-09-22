@@ -2,11 +2,10 @@ const Empleado = require("./Empleado");
 const Checker = require("./Checker");
 
 function EmpleadoAdministrativo(nombre, apellido, dni, sueldo) {
-  if (Checker.sueldoPositivo(sueldo)) {
+  if (Checker.sueldoValido(sueldo)) {
     this.sueldo = sueldo;
+    Empleado.call(this, nombre, apellido, dni);
   }
-
-  Empleado.call(this, nombre, apellido, dni);
 
   this.obtenerMonto = () => {
     return this.sueldo;

@@ -1,9 +1,9 @@
-const Empleado = require("./Empleado");
+const EmpleadoAdministrativo = require("./EmpleadoAdministrativo");
+const EmpleadoPorHora = require("./EmpleadoPorHora");
 
 const main = (function () {
-  const Angie = Object.create(Empleado);
-  Angie.nombre = "Angie";
-  Angie.apellido = "Caceres";
-  Angie.dni = 123456;
-  console.log(Angie.obtenerNombreCompleto());
+    const Angie = new EmpleadoAdministrativo("Angela","Caceres",123456,1400);
+    console.log(Angie.obtenerMonto());
+    const Agustin = new EmpleadoPorHora("Agustin","Grigaliunas",786472,200,6);
+    console.log(Agustin.obtenerMonto());
 })();

@@ -8,7 +8,7 @@ const main = (function () {
     nombre: "Angela",
     apellido: "Caceres",
     dni: 123456,
-    sueldo: 1200,
+    sueldo: 12000,
   });
 
   const Agustin = EmpleadoFactory.crearEmpleadoPorHora({

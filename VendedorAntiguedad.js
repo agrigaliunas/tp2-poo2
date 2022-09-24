@@ -6,10 +6,16 @@ function VendedorAntiguedad(nombre, apellido, dni, comision, sueldo) {
     // para calcular el sueldo final, hay que sumar cada monto de cada factura multiplicado por su respectiva comision
     this.sueldo = sueldo;
     Vendedor.call(this, nombre, apellido, dni, comision);
+    
   }
 
   this.obtenerMonto = () => {
-    // idem linea 8
+    /*this.total=0;
+    this.facturas.forEach(factura => {
+        this.total+=factura.montoTotal;
+    });
+    console.log(this.total);*/
+    return this.calculartotalVendido()*this.comision + this.sueldo;
   };
 }
 

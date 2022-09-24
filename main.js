@@ -19,11 +19,20 @@ const main = (function () {
     horasTrabajadas: 10,
   });
 
+
   const Tomas = EmpleadoFactory.crearVendedor({
     nombre: "Tomas",
     apellido: "Ferrari",
     dni: 124671,
     comision: 0.1,
+  });
+
+  const AgusD = EmpleadoFactory.crearVendedorAntiguedad({
+    nombre: "agus",
+    apellido: "D",
+    dni: 124671,
+    comision: 0.1,
+    sueldo: 200,
   });
   
   var Teclado = new Producto("Teclado",4000);
@@ -42,6 +51,17 @@ const main = (function () {
   facturaTomas.agregarProducto(Auricular,30);
   facturaTomas.agregarProducto(Cable,50); // ver cantidades negativas
 
-  console.log(facturaTomas); // se ve el stock al imprimir :-/
+  //console.log(facturaTomas); // se ve el stock al imprimir :-/
+
+
+
+  const factura2AgusD = new Factura(AgusD);
+  factura2AgusD.agregarProducto(Teclado,1); 
+  factura2AgusD.agregarProducto(Mouse,1); 
+
+
+
+  console.log( Tomas.obtenerMonto());
+  console.log( AgusD.obtenerMonto());
 
 })();

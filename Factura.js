@@ -5,6 +5,7 @@ const Factura = function (vendedor) {
   var productos = [];
   this.id = id;
   this.vendedor = vendedor;
+  this.vendedor.vender(this);
   id++;
   this.montoTotal = 0;
 
@@ -19,6 +20,10 @@ const Factura = function (vendedor) {
       throw new Error("No hay stock del producto" + producto.nombre);
     }
   };
+  //this.vendedor.calculartotalVendido(this.montoTotal);
+
+
+
 };
 
 module.exports = Factura;

@@ -9,6 +9,18 @@ const Factura = function (vendedor) {
   id++;
   this.montoTotal = 0;
 
+  this.imprimirFactura = function () {
+    console.log(
+      "\n==========\nFactura id:" +
+        this.id +
+        "\nVendedor: " +
+        this.vendedor.nombre +
+        "\nMonto total: " +
+        this.montoTotal +
+        "\n==========\n"
+    );
+  };
+
   this.agregarProducto = function (producto, cantidad) {
     if (StockHandler.checkStock(producto)) {
       producto.cantidad = cantidad;
@@ -20,10 +32,6 @@ const Factura = function (vendedor) {
       throw new Error("No hay stock del producto" + producto.nombre);
     }
   };
-  //this.vendedor.calculartotalVendido(this.montoTotal);
-
-
-
 };
 
 module.exports = Factura;

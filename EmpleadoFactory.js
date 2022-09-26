@@ -30,7 +30,15 @@ const EmpleadoFactory = (function () {
         props.comision
       );
     },
-    crearVendedorAntiguedad: function (props) {},
+    crearVendedorAntiguedad: function (props) {
+      return new VendedorAntiguedad(
+        props.nombre,
+        props.apellido,
+        props.dni,
+        props.comision,
+        props.sueldo
+      );
+    },
   };
 })();
 

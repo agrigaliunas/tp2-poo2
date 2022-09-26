@@ -8,7 +8,6 @@ function EmpleadoPorHora(nombre, apellido, dni, valorHora, horasTrabajadas) {
     Empleado.call(this, nombre, apellido, dni);
   }
 
-
   this.obtenerMonto = () => {
     return this.valorHora * this.horasTrabajadas;
   };
